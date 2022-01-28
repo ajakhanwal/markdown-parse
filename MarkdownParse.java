@@ -16,6 +16,12 @@ public class MarkdownParse {
         int end = 0;
         while (currentIndex < markdown.length()) {
             char curr = markdown.charAt(currentIndex);
+            //if an escape char is found, skip it and the 
+            //character it is escaping
+            if (curr == '\\') {
+                currentIndex += 2;
+                continue;
+            }
             //if we are potentially looking at a link with []
             if (findLink) {
                 // if there arent any other brackets on the bracket tracker
