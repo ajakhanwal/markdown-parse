@@ -30,7 +30,7 @@ public class MarkdownParsej {
                     if (curr == '(') {
                         bracketTracker.push(curr);
                         start = currentIndex;
-                    } else { //something else came after the ] that wasn't (
+                    }else { //something else came after the ] that wasn't (
                         findLink = false;
                     }
                 } else {
